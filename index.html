@@ -2,42 +2,108 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
   <title>東京機票快照</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 24px; color: #222; background:#f6f8fb; }
-    h1,h2 { margin: 0 0 12px 0; }
-    .wrap { max-width: 1200px; margin: 0 auto; }
-    .card { border: 1px solid #ddd; border-radius: 14px; padding: 20px; background: #fff; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,.04); }
-    table { width: 100%; border-collapse: collapse; background: #fff; }
-    th, td { padding: 10px; border-bottom: 1px solid #e7e7e7; font-size: 14px; }
-    th { text-align: left; background: #f0f4fa; }
-    .price { color: #0a7f2e; font-weight: bold; font-size: 20px; }
-    .meta { color: #666; font-size: 13px; }
-    .btn { display: inline-block; padding: 10px 14px; background: #0a7f2e; color: #fff; text-decoration: none; border-radius: 8px; }
-    .chip { display:inline-block; padding:4px 8px; border-radius:999px; background:#eef3ff; margin-right:6px; font-size:12px; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 24px;
+      background: #f6f7fb;
+      color: #222;
+    }
+    .wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 18px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .top-title {
+      font-size: 42px;
+      font-weight: 700;
+      margin: 0 0 18px 0;
+    }
+    .summary {
+      background: #f0f8f2;
+      border: 1px solid #cfe6d4;
+    }
+    .summary-row {
+      margin: 8px 0;
+      font-size: 16px;
+    }
+    .chips {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .chip {
+      display: inline-block;
+      background: #eef2ff;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 13px;
+    }
+    .date-block {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 14px;
+      padding: 18px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .date-block h2 {
+      margin: 0 0 12px 0;
+      font-size: 24px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+    th, td {
+      padding: 10px 8px;
+      border-bottom: 1px solid #eee;
+      text-align: left;
+    }
+    th {
+      background: #f1f4f9;
+    }
+    a.button {
+      display: inline-block;
+      margin-top: 14px;
+      background: #0a7f2e;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <div class="card">
-      <h1>✈️ 東京機票快照</h1>
-      <div class="meta">更新時間：2026-04-20 02:54</div>
+      <div class="top-title">東京機票快照</div>
+      <div style="font-size:16px;">更新時間：2026/4/20 03:01:00</div>
+    </div>
+
+    <div class="card summary">
+      <h2 style="margin-top:0;">本次最低價</h2>
+      <div class="summary-row"><b>價格：</b>10,079 TWD</div>
+      <div class="summary-row"><b>航空：</b>台灣虎航</div>
+      <div class="summary-row"><b>路線：</b>TPE → NRT</div>
+      <div class="summary-row"><b>日期：</b>2027-01-30 → 2027-02-04</div>
+      <a class="button" href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAxLTMwagcIARIDVFBFcgcIARIDTlJUGh4SCjIwMjctMDItMDRqBwgBEgNOUlRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank">查看 Google Flights</a>
     </div>
 
     <div class="card">
-      <h2>🏆 最低價</h2>
-      <p class="price">10,079 TWD</p>
-      <p><b>台灣虎航</b></p>
-      <p>台北桃園 TPE → 東京成田 NRT</p>
-      <p>2027-01-30 → 2027-02-04</p>
-      <p><a class="btn" href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAxLTMwagcIARIDVFBFcgcIARIDTlJUGh4SCjIwMjctMDItMDRqBwgBEgNOUlRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank" rel="noopener">查看 Google Flights</a></p>
-    </div>
-
-    <div class="card">
-      <h2>查詢條件</h2>
-      <div>
+      <h2 style="margin-top:0;">查詢條件</h2>
+      <div class="chips">
         <span class="chip">出發：TPE / TSA</span>
         <span class="chip">目的地：HND / NRT</span>
         <span class="chip">航空：星宇 / 長榮 / 虎航 / Jetstar</span>
@@ -45,235 +111,271 @@
       </div>
     </div>
 
-    <div class="card">
-      <h2>全部結果</h2>
+    
+    <div class="date-block">
+      <h2>2027-01-30 → 2027-02-04</h2>
       <table>
         <thead>
           <tr>
             <th>出發</th>
             <th>到達</th>
-            <th>去程</th>
-            <th>回程</th>
             <th>航空</th>
-            <th style="text-align:right;">價格</th>
+            <th>價格</th>
             <th>連結</th>
           </tr>
         </thead>
         <tbody>
           
-  <tr>
-    <td>台北桃園 TPE</td>
-    <td>東京成田 NRT</td>
-    <td>2027-01-30</td>
-    <td>2027-02-04</td>
-    <td>台灣虎航</td>
-    <td style="text-align:right;">10,079 TWD</td>
-    <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAxLTMwagcIARIDVFBFcgcIARIDTlJUGh4SCjIwMjctMDItMDRqBwgBEgNOUlRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank" rel="noopener">查看</a></td>
-  </tr>
-
-  <tr>
-    <td>台北桃園 TPE</td>
-    <td>東京羽田 HND</td>
-    <td>2027-01-30</td>
-    <td>2027-02-04</td>
-    <td>台灣虎航</td>
-    <td style="text-align:right;">10,930 TWD</td>
-    <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAxLTMwagcIARIDVFBFcgcIARIDSE5EGh4SCjIwMjctMDItMDRqBwgBEgNITkRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank" rel="noopener">查看</a></td>
-  </tr>
-
-  <tr>
-    <td>台北桃園 TPE</td>
-    <td>東京成田 NRT</td>
-    <td>2027-01-30</td>
-    <td>2027-02-04</td>
-    <td>捷星日本航空</td>
-    <td style="text-align:right;">11,028 TWD</td>
-    <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAxLTMwagcIARIDVFBFcgcIARIDTlJUGh4SCjIwMjctMDItMDRqBwgBEgNOUlRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank" rel="noopener">查看</a></td>
-  </tr>
-
-  <tr>
-    <td>台北桃園 TPE</td>
-    <td>東京成田 NRT</td>
-    <td>2027-02-08</td>
-    <td>2027-02-14</td>
-    <td>捷星日本航空</td>
-    <td style="text-align:right;">14,163 TWD</td>
-    <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAyLTA4agcIARIDVFBFcgcIARIDTlJUGh4SCjIwMjctMDItMTRqBwgBEgNOUlRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank" rel="noopener">查看</a></td>
-  </tr>
-
-  <tr>
-    <td>台北桃園 TPE</td>
-    <td>東京成田 NRT</td>
-    <td>2027-02-08</td>
-    <td>2027-02-14</td>
-    <td>台灣虎航</td>
-    <td style="text-align:right;">15,860 TWD</td>
-    <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAyLTA4agcIARIDVFBFcgcIARIDTlJUGh4SCjIwMjctMDItMTRqBwgBEgNOUlRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank" rel="noopener">查看</a></td>
-  </tr>
-
-  <tr>
-    <td>台北桃園 TPE</td>
-    <td>東京成田 NRT</td>
-    <td>2027-02-25</td>
-    <td>2027-03-02</td>
-    <td>長榮航空</td>
-    <td style="text-align:right;">18,587 TWD</td>
-    <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAyLTI1agcIARIDVFBFcgcIARIDTlJUGh4SCjIwMjctMDMtMDJqBwgBEgNOUlRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank" rel="noopener">查看</a></td>
-  </tr>
-
-  <tr>
-    <td>台北松山 TSA</td>
-    <td>東京羽田 HND</td>
-    <td>2027-02-25</td>
-    <td>2027-03-02</td>
-    <td>長榮航空</td>
-    <td style="text-align:right;">19,410 TWD</td>
-    <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAyLTI1agcIARIDVFNBcgcIARIDSE5EGh4SCjIwMjctMDMtMDJqBwgBEgNITkRyBwgBEgNUU0FAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank" rel="noopener">查看</a></td>
-  </tr>
-
-  <tr>
-    <td>台北桃園 TPE</td>
-    <td>東京成田 NRT</td>
-    <td>2027-02-25</td>
-    <td>2027-03-02</td>
-    <td>星宇航空</td>
-    <td style="text-align:right;">19,815 TWD</td>
-    <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAyLTI1agcIARIDVFBFcgcIARIDTlJUGh4SCjIwMjctMDMtMDJqBwgBEgNOUlRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank" rel="noopener">查看</a></td>
-  </tr>
-
-  <tr>
-    <td>台北桃園 TPE</td>
-    <td>東京成田 NRT</td>
-    <td>2027-02-08</td>
-    <td>2027-02-14</td>
-    <td>長榮航空</td>
-    <td style="text-align:right;">20,748 TWD</td>
-    <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAyLTA4agcIARIDVFBFcgcIARIDTlJUGh4SCjIwMjctMDItMTRqBwgBEgNOUlRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank" rel="noopener">查看</a></td>
-  </tr>
-
-  <tr>
-    <td>台北桃園 TPE</td>
-    <td>東京羽田 HND</td>
-    <td>2027-02-08</td>
-    <td>2027-02-14</td>
-    <td>台灣虎航</td>
-    <td style="text-align:right;">21,130 TWD</td>
-    <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAyLTA4agcIARIDVFBFcgcIARIDSE5EGh4SCjIwMjctMDItMTRqBwgBEgNITkRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank" rel="noopener">查看</a></td>
-  </tr>
-
-  <tr>
-    <td>台北桃園 TPE</td>
-    <td>東京成田 NRT</td>
-    <td>2027-01-30</td>
-    <td>2027-02-04</td>
-    <td>長榮航空</td>
-    <td style="text-align:right;">23,926 TWD</td>
-    <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAxLTMwagcIARIDVFBFcgcIARIDTlJUGh4SCjIwMjctMDItMDRqBwgBEgNOUlRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank" rel="noopener">查看</a></td>
-  </tr>
-
-  <tr>
-    <td>台北桃園 TPE</td>
-    <td>東京成田 NRT</td>
-    <td>2027-02-08</td>
-    <td>2027-02-14</td>
-    <td>星宇航空</td>
-    <td style="text-align:right;">25,991 TWD</td>
-    <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAyLTA4agcIARIDVFBFcgcIARIDTlJUGh4SCjIwMjctMDItMTRqBwgBEgNOUlRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank" rel="noopener">查看</a></td>
-  </tr>
-
-  <tr>
-    <td>台北桃園 TPE</td>
-    <td>東京羽田 HND</td>
-    <td>2027-02-25</td>
-    <td>2027-03-02</td>
-    <td>長榮航空</td>
-    <td style="text-align:right;">27,058 TWD</td>
-    <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAyLTI1agcIARIDVFBFcgcIARIDSE5EGh4SCjIwMjctMDMtMDJqBwgBEgNITkRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank" rel="noopener">查看</a></td>
-  </tr>
-
-  <tr>
-    <td>台北松山 TSA</td>
-    <td>東京羽田 HND</td>
-    <td>2027-01-30</td>
-    <td>2027-02-04</td>
-    <td>長榮航空</td>
-    <td style="text-align:right;">27,267 TWD</td>
-    <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAxLTMwagcIARIDVFNBcgcIARIDSE5EGh4SCjIwMjctMDItMDRqBwgBEgNITkRyBwgBEgNUU0FAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank" rel="noopener">查看</a></td>
-  </tr>
-
-  <tr>
-    <td>台北桃園 TPE</td>
-    <td>東京成田 NRT</td>
-    <td>2027-01-30</td>
-    <td>2027-02-04</td>
-    <td>星宇航空</td>
-    <td style="text-align:right;">27,679 TWD</td>
-    <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAxLTMwagcIARIDVFBFcgcIARIDTlJUGh4SCjIwMjctMDItMDRqBwgBEgNOUlRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank" rel="noopener">查看</a></td>
-  </tr>
-
-  <tr>
-    <td>台北松山 TSA</td>
-    <td>東京羽田 HND</td>
-    <td>2027-02-08</td>
-    <td>2027-02-14</td>
-    <td>長榮航空</td>
-    <td style="text-align:right;">29,864 TWD</td>
-    <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAyLTA4agcIARIDVFNBcgcIARIDSE5EGh4SCjIwMjctMDItMTRqBwgBEgNITkRyBwgBEgNUU0FAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank" rel="noopener">查看</a></td>
-  </tr>
-
-  <tr>
-    <td>台北桃園 TPE</td>
-    <td>東京羽田 HND</td>
-    <td>2027-02-08</td>
-    <td>2027-02-14</td>
-    <td>長榮航空</td>
-    <td style="text-align:right;">34,320 TWD</td>
-    <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAyLTA4agcIARIDVFBFcgcIARIDSE5EGh4SCjIwMjctMDItMTRqBwgBEgNITkRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank" rel="noopener">查看</a></td>
-  </tr>
-
-  <tr>
-    <td>台北桃園 TPE</td>
-    <td>東京成田 NRT</td>
-    <td>2027-02-25</td>
-    <td>2027-03-02</td>
-    <td>捷星日本航空</td>
-    <td style="text-align:right;">45,435 TWD</td>
-    <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAyLTI1agcIARIDVFBFcgcIARIDTlJUGh4SCjIwMjctMDMtMDJqBwgBEgNOUlRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank" rel="noopener">查看</a></td>
-  </tr>
-
-  <tr>
-    <td>台北松山 TSA</td>
-    <td>東京成田 NRT</td>
-    <td>2027-01-30</td>
-    <td>2027-02-04</td>
-    <td>長榮航空</td>
-    <td style="text-align:right;">75,903 TWD</td>
-    <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAxLTMwagcIARIDVFNBcgcIARIDTlJUGh4SCjIwMjctMDItMDRqBwgBEgNOUlRyBwgBEgNUU0FAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank" rel="noopener">查看</a></td>
-  </tr>
-
-  <tr>
-    <td>台北桃園 TPE</td>
-    <td>東京羽田 HND</td>
-    <td>2027-01-30</td>
-    <td>2027-02-04</td>
-    <td>長榮航空</td>
-    <td style="text-align:right;">81,016 TWD</td>
-    <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAxLTMwagcIARIDVFBFcgcIARIDSE5EGh4SCjIwMjctMDItMDRqBwgBEgNITkRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank" rel="noopener">查看</a></td>
-  </tr>
-
-  <tr>
-    <td>台北松山 TSA</td>
-    <td>東京成田 NRT</td>
-    <td>2027-02-08</td>
-    <td>2027-02-14</td>
-    <td>長榮航空</td>
-    <td style="text-align:right;">90,829 TWD</td>
-    <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAyLTA4agcIARIDVFNBcgcIARIDTlJUGh4SCjIwMjctMDItMTRqBwgBEgNOUlRyBwgBEgNUU0FAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank" rel="noopener">查看</a></td>
-  </tr>
-
+      <tr >
+        <td>TPE</td>
+        <td>HND</td>
+        <td>台灣虎航</td>
+        <td style="text-align:right; font-weight:400; color:#222;">
+          10,930 TWD
+        </td>
+        <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAxLTMwagcIARIDVFBFcgcIARIDSE5EGh4SCjIwMjctMDItMDRqBwgBEgNITkRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank">查看</a></td>
+      </tr>
+    
+      <tr >
+        <td>TPE</td>
+        <td>HND</td>
+        <td>長榮航空</td>
+        <td style="text-align:right; font-weight:400; color:#222;">
+          81,016 TWD
+        </td>
+        <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAxLTMwagcIARIDVFBFcgcIARIDSE5EGh4SCjIwMjctMDItMDRqBwgBEgNITkRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank">查看</a></td>
+      </tr>
+    
+      <tr style="background:#eef9f0;">
+        <td>TPE</td>
+        <td>NRT</td>
+        <td>台灣虎航</td>
+        <td style="text-align:right; font-weight:700; color:#0a7f2e;">
+          10,079 TWD
+        </td>
+        <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAxLTMwagcIARIDVFBFcgcIARIDTlJUGh4SCjIwMjctMDItMDRqBwgBEgNOUlRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank">查看</a></td>
+      </tr>
+    
+      <tr >
+        <td>TPE</td>
+        <td>NRT</td>
+        <td>捷星日本航空</td>
+        <td style="text-align:right; font-weight:400; color:#222;">
+          11,028 TWD
+        </td>
+        <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAxLTMwagcIARIDVFBFcgcIARIDTlJUGh4SCjIwMjctMDItMDRqBwgBEgNOUlRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank">查看</a></td>
+      </tr>
+    
+      <tr >
+        <td>TPE</td>
+        <td>NRT</td>
+        <td>長榮航空</td>
+        <td style="text-align:right; font-weight:400; color:#222;">
+          23,926 TWD
+        </td>
+        <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAxLTMwagcIARIDVFBFcgcIARIDTlJUGh4SCjIwMjctMDItMDRqBwgBEgNOUlRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank">查看</a></td>
+      </tr>
+    
+      <tr >
+        <td>TPE</td>
+        <td>NRT</td>
+        <td>星宇航空</td>
+        <td style="text-align:right; font-weight:400; color:#222;">
+          27,679 TWD
+        </td>
+        <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAxLTMwagcIARIDVFBFcgcIARIDTlJUGh4SCjIwMjctMDItMDRqBwgBEgNOUlRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank">查看</a></td>
+      </tr>
+    
+      <tr >
+        <td>TSA</td>
+        <td>HND</td>
+        <td>長榮航空</td>
+        <td style="text-align:right; font-weight:400; color:#222;">
+          27,267 TWD
+        </td>
+        <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAxLTMwagcIARIDVFNBcgcIARIDSE5EGh4SCjIwMjctMDItMDRqBwgBEgNITkRyBwgBEgNUU0FAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank">查看</a></td>
+      </tr>
+    
+      <tr >
+        <td>TSA</td>
+        <td>NRT</td>
+        <td>長榮航空</td>
+        <td style="text-align:right; font-weight:400; color:#222;">
+          75,903 TWD
+        </td>
+        <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAxLTMwagcIARIDVFNBcgcIARIDTlJUGh4SCjIwMjctMDItMDRqBwgBEgNOUlRyBwgBEgNUU0FAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank">查看</a></td>
+      </tr>
+    
         </tbody>
       </table>
     </div>
+  
+    <div class="date-block">
+      <h2>2027-02-08 → 2027-02-14</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>出發</th>
+            <th>到達</th>
+            <th>航空</th>
+            <th>價格</th>
+            <th>連結</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+      <tr >
+        <td>TPE</td>
+        <td>HND</td>
+        <td>台灣虎航</td>
+        <td style="text-align:right; font-weight:400; color:#222;">
+          21,130 TWD
+        </td>
+        <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAyLTA4agcIARIDVFBFcgcIARIDSE5EGh4SCjIwMjctMDItMTRqBwgBEgNITkRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank">查看</a></td>
+      </tr>
+    
+      <tr >
+        <td>TPE</td>
+        <td>HND</td>
+        <td>長榮航空</td>
+        <td style="text-align:right; font-weight:400; color:#222;">
+          34,320 TWD
+        </td>
+        <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAyLTA4agcIARIDVFBFcgcIARIDSE5EGh4SCjIwMjctMDItMTRqBwgBEgNITkRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank">查看</a></td>
+      </tr>
+    
+      <tr >
+        <td>TPE</td>
+        <td>NRT</td>
+        <td>捷星日本航空</td>
+        <td style="text-align:right; font-weight:400; color:#222;">
+          14,163 TWD
+        </td>
+        <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAyLTA4agcIARIDVFBFcgcIARIDTlJUGh4SCjIwMjctMDItMTRqBwgBEgNOUlRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank">查看</a></td>
+      </tr>
+    
+      <tr >
+        <td>TPE</td>
+        <td>NRT</td>
+        <td>台灣虎航</td>
+        <td style="text-align:right; font-weight:400; color:#222;">
+          15,860 TWD
+        </td>
+        <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAyLTA4agcIARIDVFBFcgcIARIDTlJUGh4SCjIwMjctMDItMTRqBwgBEgNOUlRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank">查看</a></td>
+      </tr>
+    
+      <tr >
+        <td>TPE</td>
+        <td>NRT</td>
+        <td>長榮航空</td>
+        <td style="text-align:right; font-weight:400; color:#222;">
+          20,748 TWD
+        </td>
+        <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAyLTA4agcIARIDVFBFcgcIARIDTlJUGh4SCjIwMjctMDItMTRqBwgBEgNOUlRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank">查看</a></td>
+      </tr>
+    
+      <tr >
+        <td>TPE</td>
+        <td>NRT</td>
+        <td>星宇航空</td>
+        <td style="text-align:right; font-weight:400; color:#222;">
+          25,991 TWD
+        </td>
+        <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAyLTA4agcIARIDVFBFcgcIARIDTlJUGh4SCjIwMjctMDItMTRqBwgBEgNOUlRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank">查看</a></td>
+      </tr>
+    
+      <tr >
+        <td>TSA</td>
+        <td>HND</td>
+        <td>長榮航空</td>
+        <td style="text-align:right; font-weight:400; color:#222;">
+          29,864 TWD
+        </td>
+        <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAyLTA4agcIARIDVFNBcgcIARIDSE5EGh4SCjIwMjctMDItMTRqBwgBEgNITkRyBwgBEgNUU0FAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank">查看</a></td>
+      </tr>
+    
+      <tr >
+        <td>TSA</td>
+        <td>NRT</td>
+        <td>長榮航空</td>
+        <td style="text-align:right; font-weight:400; color:#222;">
+          90,829 TWD
+        </td>
+        <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAyLTA4agcIARIDVFNBcgcIARIDTlJUGh4SCjIwMjctMDItMTRqBwgBEgNOUlRyBwgBEgNUU0FAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank">查看</a></td>
+      </tr>
+    
+        </tbody>
+      </table>
+    </div>
+  
+    <div class="date-block">
+      <h2>2027-02-25 → 2027-03-02</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>出發</th>
+            <th>到達</th>
+            <th>航空</th>
+            <th>價格</th>
+            <th>連結</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+      <tr >
+        <td>TPE</td>
+        <td>HND</td>
+        <td>長榮航空</td>
+        <td style="text-align:right; font-weight:400; color:#222;">
+          27,058 TWD
+        </td>
+        <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAyLTI1agcIARIDVFBFcgcIARIDSE5EGh4SCjIwMjctMDMtMDJqBwgBEgNITkRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank">查看</a></td>
+      </tr>
+    
+      <tr >
+        <td>TPE</td>
+        <td>NRT</td>
+        <td>長榮航空</td>
+        <td style="text-align:right; font-weight:400; color:#222;">
+          18,587 TWD
+        </td>
+        <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAyLTI1agcIARIDVFBFcgcIARIDTlJUGh4SCjIwMjctMDMtMDJqBwgBEgNOUlRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank">查看</a></td>
+      </tr>
+    
+      <tr >
+        <td>TPE</td>
+        <td>NRT</td>
+        <td>星宇航空</td>
+        <td style="text-align:right; font-weight:400; color:#222;">
+          19,815 TWD
+        </td>
+        <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAyLTI1agcIARIDVFBFcgcIARIDTlJUGh4SCjIwMjctMDMtMDJqBwgBEgNOUlRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank">查看</a></td>
+      </tr>
+    
+      <tr >
+        <td>TPE</td>
+        <td>NRT</td>
+        <td>捷星日本航空</td>
+        <td style="text-align:right; font-weight:400; color:#222;">
+          45,435 TWD
+        </td>
+        <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAyLTI1agcIARIDVFBFcgcIARIDTlJUGh4SCjIwMjctMDMtMDJqBwgBEgNOUlRyBwgBEgNUUEVAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank">查看</a></td>
+      </tr>
+    
+      <tr >
+        <td>TSA</td>
+        <td>HND</td>
+        <td>長榮航空</td>
+        <td style="text-align:right; font-weight:400; color:#222;">
+          19,410 TWD
+        </td>
+        <td><a href="https://www.google.com/travel/flights?hl=zh-tw&gl=us&curr=TWD&tfs=CBwQAhoeEgoyMDI3LTAyLTI1agcIARIDVFNBcgcIARIDSE5EGh4SCjIwMjctMDMtMDJqBwgBEgNITkRyBwgBEgNUU0FAAUgBcAGYAQE&tfu=EgIIAQ" target="_blank">查看</a></td>
+      </tr>
+    
+        </tbody>
+      </table>
+    </div>
+  
   </div>
 </body>
 </html>
